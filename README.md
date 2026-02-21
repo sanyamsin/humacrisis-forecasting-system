@@ -199,7 +199,7 @@ curl -X POST http://localhost:8000/predict \
 
 ## 👤 Author
 
-**Tresor** — Data Scientist | Humanitarian & Development Specialist  
+**Serge Nyamsin** — Data Scientist | Humanitarian & Development Specialist  
 12+ years field experience with French Red Cross, Action Against Hunger, Handicap International  
 MSc Data Science & AI — DSTI
 
