@@ -1,0 +1,47 @@
+project:
+  name: HumaCrisis Forecasting System
+  version: 1.0.0
+  description: Multi-dimensional humanitarian crisis forecasting for Sub-Saharan Africa
+
+data:
+  raw_path: data/raw
+  processed_path: data/processed
+  countries:
+    - CAR
+    - SEN
+    - MRT
+    - NER
+    - MLI
+    - TCD
+    - COD
+    - SSD
+    - ETH
+    - SOM
+
+sources:
+  fewsnet:
+    base_url: "https://fdw.fews.net/api"
+    indicators: ["IPC_phase", "food_insecurity_pop"]
+  acled:
+    base_url: "https://api.acleddata.com/acled/read"
+    event_types: ["battles", "explosions", "violence_civilians"]
+  unhcr:
+    base_url: "https://api.unhcr.org/population/v1"
+    indicators: ["refugees", "idps", "returnees"]
+
+models:
+  forecast_horizon: 3
+  train_test_split: 0.8
+  cv_folds: 5
+  target_variable: crisis_severity_index
+
+mlflow:
+  tracking_uri: mlruns
+  experiment_name: humacrisis_forecasting
+
+api:
+  host: 0.0.0.0
+  port: 8000
+
+dashboard:
+  port: 8501
