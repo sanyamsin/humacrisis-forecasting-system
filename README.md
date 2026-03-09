@@ -64,7 +64,7 @@ humacrisis-forecasting-system/
 
 ### 1 — Clone & Setup
 ```bash
-git clone https://github.com/TON_USERNAME/humacrisis-forecasting-system.git
+git clone https://github.com/sanyamsin/humacrisis-forecasting-system.git
 cd humacrisis-forecasting-system
 conda create -n humacrisis python=3.10 -y
 conda activate humacrisis
